@@ -3,11 +3,18 @@
 ## AIM
 To develop a Recurrent Neural Network (RNN) model for predicting stock prices using historical closing price data.
 
-## THEORY
+## Problem Statement and Dataset
 
+Stock price prediction is an important task in financial analysis because investors and organizations rely on accurate forecasts to make better investment decisions. Traditional statistical methods often struggle to capture complex patterns in time-series data such as stock prices.
 
-## Neural Network Model
-Include the neural network model diagram.
+The objective of this project is to develop a Recurrent Neural Network (RNN) model that can learn patterns from historical stock price data and predict future prices. Using the historical closing prices of Google stock, the model will be trained on a training dataset and evaluated on a separate test dataset.
+
+The system will involve loading the datasets, preprocessing the data, building and training an RNN model, and then predicting stock prices for the test dataset. Finally, the predicted values will be compared with the actual stock prices to evaluate the performance and accuracy of the model.
+
+<img width="671" height="840" alt="image" src="https://github.com/user-attachments/assets/1ac46094-9fe1-4187-a52b-397764bdef57" />
+
+<img width="672" height="757" alt="image" src="https://github.com/user-attachments/assets/051b9b7c-fefa-488b-8981-538492c73625" />
+
 
 ## DESIGN STEPS
 ### STEP 1: 
@@ -18,29 +25,31 @@ Load and normalize data, create sequences.
 
 Convert data to tensors and set up DataLoader.
 
+
 ### STEP 3: 
 
 Define the RNN model architecture.
+
 
 ### STEP 4: 
 
 Summarize, compile with loss and optimizer.
 
+
 ### STEP 5: 
 
 Train the model with loss tracking.
+
 
 ### STEP 6: 
 
 Predict on test data, plot actual vs. predicted prices.
 
-
-
 ## PROGRAM
 
-### Name: Sathish B
+### Name: sathish.B
 
-### Register Number:212223030299
+### Register Number: 212224040299
 
 ```python
 
@@ -134,8 +143,8 @@ def train_model(model, train_loader, criterion, optimizer, epochs=20):
         train_losses.append(total_loss / len(train_loader))
         print(f"Epoch [{epoch+1}/{epochs}], Loss: {total_loss / len(train_loader):.4f}")
 # Plot training loss
-    print('Name: Sathish b')
-    print('Register Number: 212224040299')
+    print('Name: Hezron Belix')
+    print('Register Number: 212223230078')
     plt.plot(train_losses, label='Training Loss')
     plt.xlabel('Epoch')
     plt.ylabel('MSE Loss')
@@ -155,8 +164,8 @@ predicted_prices = scaler.inverse_transform(predicted)
 actual_prices = scaler.inverse_transform(actual)
 
 # Plot the predictions vs actual prices
-print('Name:Sathish b')
-print('Register Number: 212224040299')
+print('Name: Hezron Belix')
+print('Register Number: 212223230078')
 plt.figure(figsize=(10, 6))
 plt.plot(actual_prices, label='Actual Price')
 plt.plot(predicted_prices, label='Predicted Price')
@@ -169,31 +178,25 @@ print(f'Predicted Price: {predicted_prices[-1]}')
 print(f'Actual Price: {actual_prices[-1]}')
 
 
-
-
-
 ```
 
 ### OUTPUT
 
 ## Training Loss Over Epochs Plot
 
-<img width="1047" height="656" alt="image" src="https://github.com/user-attachments/assets/04218b4b-a14a-465f-90de-79e5f775345b" />
 
-
+<img width="762" height="1062" alt="image" src="https://github.com/user-attachments/assets/d3455013-e614-4220-b96d-bfc65a4b2f76" />
 
 
 ## True Stock Price, Predicted Stock Price vs time
 
 
-<img width="1255" height="795" alt="image" src="https://github.com/user-attachments/assets/4a18ad6d-58f2-4c80-b17a-b8f2614ba149" />
-
+<img width="1082" height="741" alt="image" src="https://github.com/user-attachments/assets/eee6a6b7-120e-4596-aba7-03ca8bcb829b" />
 
 ### Predictions
 
-
-<img width="277" height="50" alt="image" src="https://github.com/user-attachments/assets/cf0743f2-ea0f-47ee-b9a5-5890120c7c91" />
-
+<img width="421" height="52" alt="image" src="https://github.com/user-attachments/assets/e5116b6c-b062-48b8-8b44-87537f662572" />
 
 ## RESULT
+
 Thus, a Recurrent Neural Network (RNN) model for predicting stock prices using historical closing price data has been developed successfully.
